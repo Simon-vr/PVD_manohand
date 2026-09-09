@@ -1,0 +1,20 @@
+# Runtime dependencies for PVD_hand manohand completion.
+#
+# The model also needs a GPU with the custom PVCNN CUDA ops compiled on first
+# import (see README). That requires a CUDA-capable nvcc + a C++ compiler
+# (gcc/g++), plus `ninja`.
+
+# PyTorch must be the CUDA build that supports YOUR GPU's compute capability.
+# Example (Blackwell sm_120 / CUDA 13, pip):
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu130
+torch>=2.7
+torchvision>=0.19
+
+numpy
+scipy
+matplotlib
+trimesh
+tqdm
+
+# build tool for the JIT-compiled CUDA extension
+ninja

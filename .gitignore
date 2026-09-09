@@ -1,0 +1,21 @@
+# ===== data (large binaries, not committed) =====
+datasets/*.pt
+datasets/*.npy
+
+# ===== deprecated / old artifacts =====
+_deprecated_data/
+_deprecated_generation/
+_deprecated_code/
+_deprecated_assets/
+_deprecated_outputs/
+
+# ===== outputs & caches =====
+output/
+.torch_extensions/
+.pi/
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# ===== os junk =====
+.DS_Store
