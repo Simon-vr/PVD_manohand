@@ -17,22 +17,22 @@ This work uses the **S2HGD** dataset (*Single-view Scene-to-Human Grasp Dataset*
 
 S2HGD contains about **99,000 single-object, single-view scene point clouds** covering **1,668 distinct objects**, each with **one human-grasp annotation** (captured from real grasps). This repository fits those grasps to the **MANO** hand model and converts them into point clouds, producing `manohand.pt` for hand point-cloud completion. **Data copyright belongs to the original authors**; please follow their license.
 
-> ⚠️ **Note: only the DATA comes from S2HGD; the CODE in this repo is unrelated to that paper** — it is an independent PVCNN2-based diffusion implementation for human-hand point-cloud completion.
+> **Note: only the DATA comes from S2HGD; the CODE in this repo is unrelated to that paper** — it is an independent PVCNN2-based diffusion implementation for human-hand point-cloud completion.
 
 ## Results
 
 Image naming in `assets/`: `Figure_<id>_1` = **object point cloud**, `Figure_<id>_2` = **object + completed hand** (`<id>` is the sample/object index).
 
-| Object #0 | Object #0 + completed hand |
-|---|---|
+| Object#0                       | Object#0 + completed hand           |
+| ------------------------------ | ----------------------------------- |
 | ![obj0](assets/Figure_0_1.png) | ![obj0+hand](assets/Figure_0_2.png) |
 
-| Object #5 | Object #5 + completed hand |
-|---|---|
+| Object#5                       | Object#5 + completed hand           |
+| ------------------------------ | ----------------------------------- |
 | ![obj5](assets/Figure_5_1.png) | ![obj5+hand](assets/Figure_5_2.png) |
 
-| Object #20 | Object #20 + completed hand |
-|---|---|
+| Object#20                        | Object#20 + completed hand            |
+| -------------------------------- | ------------------------------------- |
 | ![obj20](assets/Figure_20_1.png) | ![obj20+hand](assets/Figure_20_2.png) |
 
 ---
@@ -61,7 +61,7 @@ datasets/manohand.pt
 
 Format (a `torch.save` dict): `{"hands": Tensor[N,300,5], "objs": Tensor[N,2048,5]}`.
 Channels: `0..2 = xyz`, `3 = hand-part label (1..5)`, `4 = contact closeness (0..1)`.
-See **[DATASET.md](DATASET.md)** for provenance, generation pipeline and per-file details.
+See **[DATASET.en.md](DATASET.en.md)** / **[DATASET.md](DATASET.md)** for provenance, generation pipeline and per-file details.
 
 ## Pretrained Model
 
@@ -118,12 +118,12 @@ PVD_hand_new/
 ├── train_completion.py        # training
 ├── test_completion.py         # inference + Chamfer
 ├── viz_interactive.py         # interactive / offline visualization
-├── DATASET.md                 # dataset documentation
-├── requirements.txt
-└── _deprecated_*              # old code/data/outputs (not committed)
+├── DATASET.md                 # dataset documentation (Chinese)
+├── DATASET.en.md              # dataset documentation (English)
+└── requirements.txt
 ```
 
-## Citation (data only)
+## Citation
 
 **The data comes from S2HGD; the code is unrelated to that paper.** If you use this data, please cite the S2HGD paper:
 
@@ -138,5 +138,5 @@ PVD_hand_new/
 
 ## Notes
 
-- `output/`, `.torch_extensions/`, `datasets/*.pt`, `checkpoints/*.pth`, `_deprecated_*` are all gitignored.
-- This repo keeps only hand point-cloud completion (train/inference/visualization); other parts (generation, robotic hands, early processing) live under `_deprecated_*`.
+- `output/`, `.torch_extensions/`, `datasets/*.pt`, `checkpoints/*.pth` are gitignored.
+- This repository focuses on human-hand point-cloud completion (training / inference / visualization).

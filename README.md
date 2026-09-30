@@ -17,7 +17,7 @@
 
 S2HGD 包含约 **99,000** 个**单物体、单视角场景点云**，覆盖 **1,668 个不同物体**，每个点云配有**一个人手抓取标注**（真实采集并由人手拟合得到）。本仓库在此数据基础上，把人手抓取拟合为 **MANO** 参数并转成点云，构建 `manohand.pt` 用于人手点云补全。**数据版权归原作者所有**，请遵循其许可。
 
-> ⚠️ **注意：只有“数据”来自 S2HGD；本仓库的“代码”与那篇论文无关**——代码是基于 PVCNN2 的扩散式人手点云补全的独立实现。
+> **注意：只有“数据”来自 S2HGD；本仓库的“代码”与那篇论文无关**——代码是基于 PVCNN2 的扩散式人手点云补全的独立实现。
 
 ## 效果展示
 
@@ -61,7 +61,7 @@ datasets/manohand.pt
 
 格式（`torch.save` 的 dict）：`{"hands": Tensor[N,300,5], "objs": Tensor[N,2048,5]}`。
 通道：`0..2 = xyz`，`3 = 手部件标签(1..5)`，`4 = 接触度(0..1)`。
-详见 **[DATASET.md](DATASET.md)**（数据来源、生成流程、各中间文件说明）。
+详见 **[DATASET.md](DATASET.md)** / **[DATASET.en.md](DATASET.en.md)**（数据来源、生成流程、各中间文件说明）。
 
 ## 预训练模型
 
@@ -118,9 +118,9 @@ PVD_hand_new/
 ├── train_completion.py        # 训练
 ├── test_completion.py         # 推理 + Chamfer
 ├── viz_interactive.py         # 交互/出图可视化
-├── DATASET.md                 # 数据集说明
-├── requirements.txt
-└── _deprecated_*              # 旧代码/数据/输出 (不入库)
+├── DATASET.md                 # 数据集说明（中文）
+├── DATASET.en.md              # dataset doc (English)
+└── requirements.txt
 ```
 
 ## 引用（仅针对数据）
@@ -138,5 +138,5 @@ PVD_hand_new/
 
 ## 说明
 
-- `output/`、`.torch_extensions/`、`datasets/*.pt`、`checkpoints/*.pth`、`_deprecated_*` 均已被 `.gitignore` 忽略。
-- 本仓库只保留人手点云补全的训练/推理/可视化；其它（生成、机械手、早期处理）见 `_deprecated_*`。
+- `output/`、`.torch_extensions/`、`datasets/*.pt`、`checkpoints/*.pth` 已被 `.gitignore` 忽略。
+- 本仓库聚焦人手点云补全的训练 / 推理 / 可视化。
