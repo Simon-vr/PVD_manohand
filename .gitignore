@@ -2,6 +2,9 @@
 datasets/*.pt
 datasets/*.npy
 
+# ===== model checkpoints (large, not committed) =====
+checkpoints/*.pth
+
 # ===== deprecated / old artifacts =====
 _deprecated_data/
 _deprecated_generation/
