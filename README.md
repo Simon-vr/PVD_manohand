@@ -1,4 +1,4 @@
-# PVD_hand — 人手点云补全
+# PVD_manohand — 人手点云补全
 
 [简体中文](README.md) | [English](README.en.md)
 

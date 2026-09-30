@@ -1,4 +1,4 @@
-# PVD_hand — Human-Hand Point-Cloud Completion
+# PVD_manohand — Human-Hand Point-Cloud Completion
 
 [简体中文](README.md) | [English](README.en.md)
 
