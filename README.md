@@ -1,4 +1,4 @@
-# PVD_hand — 人手点云补全（Diffusion）
+# PVD_hand — 人手点云补全
 
 [简体中文](README.md) | [English](README.en.md)
 
@@ -17,21 +17,20 @@
 
 S2HGD 包含约 **99,000** 个**单物体、单视角场景点云**，覆盖 **1,668 个不同物体**，每个点云配有**一个人手抓取标注**（真实采集并由人手拟合得到）。本仓库在此数据基础上，把人手抓取拟合为 **MANO** 参数并转成点云，构建 `manohand.pt` 用于人手点云补全。**数据版权归原作者所有**，请遵循其许可。
 
-
 ## 效果展示
 
 `assets/` 下的图片命名规则：`Figure_<id>_1` = **物体点云**，`Figure_<id>_2` = **物体 + 补全的人手**（`<id>` 为样本/物体序号）。
 
-| 物体 #0 | 物体 #0 + 补全手 |
-|---|---|
+| 物体#0                         | 物体#0 + 补全手                     |
+| ------------------------------ | ----------------------------------- |
 | ![obj0](assets/Figure_0_1.png) | ![obj0+hand](assets/Figure_0_2.png) |
 
-| 物体 #5 | 物体 #5 + 补全手 |
-|---|---|
+| 物体#5                         | 物体#5 + 补全手                     |
+| ------------------------------ | ----------------------------------- |
 | ![obj5](assets/Figure_5_1.png) | ![obj5+hand](assets/Figure_5_2.png) |
 
-| 物体 #20 | 物体 #20 + 补全手 |
-|---|---|
+| 物体#20                          | 物体#20 + 补全手                      |
+| -------------------------------- | ------------------------------------- |
 | ![obj20](assets/Figure_20_1.png) | ![obj20+hand](assets/Figure_20_2.png) |
 
 ---
@@ -128,7 +127,7 @@ PVD_hand_new/
 
 本仓库的 PVCNN2 骨干与扩散框架基于 **PVD**（Point-Voxel Diffusion）：
 
-- 代码：<https://github.com/alexzhou907/PVD>
+- 代码：[https://github.com/alexzhou907/PVD](https://github.com/alexzhou907/PVD)
 
 ```bibtex
 @inproceedings{Zhou_2021_ICCV,

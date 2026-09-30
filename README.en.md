@@ -1,4 +1,4 @@
-# PVD_hand — Human-Hand Point-Cloud Completion (Diffusion)
+# PVD_hand — Human-Hand Point-Cloud Completion
 
 [简体中文](README.md) | [English](README.en.md)
 
@@ -16,7 +16,6 @@ This work uses the **S2HGD** dataset (*Single-view Scene-to-Human Grasp Dataset*
 > **Single-View Scene Point Cloud Human Grasp Generation.** arXiv:2404.15815, 2024.
 
 S2HGD contains about **99,000 single-object, single-view scene point clouds** covering **1,668 distinct objects**, each with **one human-grasp annotation** (captured from real grasps). This repository fits those grasps to the **MANO** hand model and converts them into point clouds, producing `manohand.pt` for hand point-cloud completion. **Data copyright belongs to the original authors**; please follow their license.
-
 
 ## Results
 
@@ -128,7 +127,7 @@ PVD_hand_new/
 
 The PVCNN2 backbone and diffusion framework in this repo are based on **PVD** (Point-Voxel Diffusion):
 
-- Code: <https://github.com/alexzhou907/PVD>
+- Code: [https://github.com/alexzhou907/PVD](https://github.com/alexzhou907/PVD)
 
 ```bibtex
 @inproceedings{Zhou_2021_ICCV,
