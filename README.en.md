@@ -8,7 +8,7 @@ Human-hand point-cloud **completion** based on **Point-Voxel CNN (PVCNN2) + diff
 
 ---
 
-## Data Source (important)
+## Data Source
 
 This work uses the **S2HGD** dataset (*Single-view Scene-to-Human Grasp Dataset*):
 
@@ -80,7 +80,7 @@ python train_completion.py --distribution_type single --gpu 0 --bs 32 --niter 10
 
 Defaults already point to `datasets/manohand.pt`. Common flags: `--svpoints 50`, `--npoints 300`, `--nc 5`, `--bs` (use 32 on small GPUs), `--saveIter`, `--model <epoch_X.pth>` (resume/fine-tune).
 
-## Inference (quantitative)
+## Inference
 
 ```bash
 python test_completion.py --model checkpoints/epoch_599.pth --samples 0 5 20 --outdir output/completion
@@ -88,7 +88,7 @@ python test_completion.py --model checkpoints/epoch_599.pth --samples 0 5 20 --o
 
 Runs diffusion sampling to obtain the completed hand, saves `sampleXXXX.npz` (GT hand + completed hand) and prints the **Chamfer distance**.
 
-## Visualization (interactive & offline)
+## Visualization
 
 ```bash
 # Interactive popup (needs a display, e.g. WSLg/X11), rotate/zoom with the mouse
