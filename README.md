@@ -8,7 +8,7 @@
 
 ---
 
-## 数据来源（重要）
+## 数据来源
 
 本工作使用 **S2HGD** 数据集（*Single-view Scene-to-Human Grasp Dataset*）：
 
@@ -80,7 +80,7 @@ python train_completion.py --distribution_type single --gpu 0 --bs 32 --niter 10
 
 默认已指向 `datasets/manohand.pt`。常用参数：`--svpoints 50`、`--npoints 300`、`--nc 5`、`--bs`（小显存建议 32）、`--saveIter`（每 N epoch 存一次）、`--model <epoch_X.pth>`（续训/微调）。
 
-## 推理（定量）
+## 推理
 
 ```bash
 python test_completion.py --model checkpoints/epoch_599.pth --samples 0 5 20 --outdir output/completion
@@ -88,7 +88,7 @@ python test_completion.py --model checkpoints/epoch_599.pth --samples 0 5 20 --o
 
 对测试样本做扩散采样得到补全手，保存 `sampleXXXX.npz`（含 GT 手与补全手点云）并打印 **Chamfer 距离**。
 
-## 可视化（交互 & 出图）
+## 可视化
 
 ```bash
 # 交互弹窗（需图形环境，如 WSLg/X11），可旋转/缩放
