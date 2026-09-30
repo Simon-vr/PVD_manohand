@@ -2,7 +2,7 @@
 
 [简体中文](README.md) | [English](README.en.md)
 
-Human-hand point-cloud **completion** based on **Point-Voxel CNN (PVCNN2) + diffusion**. Given a partial point cloud of the grasped object as conditioning, the model completes a **human hand point cloud** through reverse diffusion, predicting a finger-part label for each hand point.
+Human-hand point-cloud **completion** based on **Point-Voxel CNN (PVCNN2) + diffusion** (backbone and diffusion framework based on [PVD](https://github.com/alexzhou907/PVD)). Given a partial point cloud of the grasped object as conditioning, the model completes a **human hand point cloud** through reverse diffusion, predicting a finger-part label for each hand point.
 
 ![object + completed hand](assets/Figure_0_2.png)
 
@@ -123,7 +123,26 @@ PVD_hand_new/
 └── requirements.txt
 ```
 
-## Citation
+## Citation / Acknowledgements
+
+### Code basis (PVD)
+
+The PVCNN2 backbone and diffusion framework in this repo are based on **PVD** (Point-Voxel Diffusion):
+
+- Code: <https://github.com/alexzhou907/PVD>
+
+```bibtex
+@inproceedings{Zhou_2021_ICCV,
+  author    = {Zhou, Linqi and Du, Yilun and Wu, Jiajun},
+  title     = {3D Shape Generation and Completion Through Point-Voxel Diffusion},
+  booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+  month     = {October},
+  year      = {2021},
+  pages     = {5826-5835}
+}
+```
+
+### Data (S2HGD)
 
 **The data comes from S2HGD; the code is unrelated to that paper.** If you use this data, please cite the S2HGD paper:
 

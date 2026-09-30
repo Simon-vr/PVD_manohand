@@ -2,7 +2,7 @@
 
 [简体中文](README.md) | [English](README.en.md)
 
-基于 **Point-Voxel CNN（PVCNN2）+ 扩散模型** 的**人手点云补全**。给定被抓握物体的局部点云条件，模型通过扩散逆向过程补全出**人手点云**，并为每个手点预测手指部件类别。
+基于 **Point-Voxel CNN（PVCNN2）+ 扩散模型** 的**人手点云补全**（骨干与扩散框架基于 [PVD](https://github.com/alexzhou907/PVD)）。给定被抓握物体的局部点云条件，模型通过扩散逆向过程补全出**人手点云**，并为每个手点预测手指部件类别。
 
 ![object + completed hand](assets/Figure_0_2.png)
 
@@ -123,9 +123,28 @@ PVD_hand_new/
 └── requirements.txt
 ```
 
-## 引用（仅针对数据）
+## 引用 / 致谢
 
-**数据来自 S2HGD，代码与该论文无关。** 若你使用了本数据，请引用 S2HGD 原论文：
+### 代码基础（PVD）
+
+本仓库的 PVCNN2 骨干与扩散框架基于 **PVD**（Point-Voxel Diffusion）：
+
+- 代码：<https://github.com/alexzhou907/PVD>
+
+```bibtex
+@inproceedings{Zhou_2021_ICCV,
+  author    = {Zhou, Linqi and Du, Yilun and Wu, Jiajun},
+  title     = {3D Shape Generation and Completion Through Point-Voxel Diffusion},
+  booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+  month     = {October},
+  year      = {2021},
+  pages     = {5826-5835}
+}
+```
+
+### 数据（S2HGD）
+
+**数据来自 S2HGD；本仓库代码与该论文无关。** 若你使用了本数据，请引用 S2HGD 原论文：
 
 ```bibtex
 @article{wang2024single,
