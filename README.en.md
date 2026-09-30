@@ -17,7 +17,6 @@ This work uses the **S2HGD** dataset (*Single-view Scene-to-Human Grasp Dataset*
 
 S2HGD contains about **99,000 single-object, single-view scene point clouds** covering **1,668 distinct objects**, each with **one human-grasp annotation** (captured from real grasps). This repository fits those grasps to the **MANO** hand model and converts them into point clouds, producing `manohand.pt` for hand point-cloud completion. **Data copyright belongs to the original authors**; please follow their license.
 
-> **Note: only the DATA comes from S2HGD; the CODE in this repo is unrelated to that paper** — it is an independent PVCNN2-based diffusion implementation for human-hand point-cloud completion.
 
 ## Results
 
@@ -144,7 +143,7 @@ The PVCNN2 backbone and diffusion framework in this repo are based on **PVD** (P
 
 ### Data (S2HGD)
 
-**The data comes from S2HGD; the code is unrelated to that paper.** If you use this data, please cite the S2HGD paper:
+If you use this data, please cite the S2HGD paper:
 
 ```bibtex
 @article{wang2024single,

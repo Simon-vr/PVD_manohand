@@ -13,7 +13,7 @@ The dataset is built on **S2HGD** (*Single-view Scene-to-Human Grasp Dataset*):
 
 S2HGD provides about **99,000 single-object, single-view scene point clouds** covering **1,668 distinct objects**, each with one real-captured **human-grasp annotation**. This dataset fits those grasps to the **MANO** hand model and converts them into point clouds.
 
-**Data copyright belongs to the S2HGD authors; follow their license. `Only the data comes from that dataset; the code in this project is unrelated to that paper.`**
+**Data copyright belongs to the S2HGD authors; follow their license.**
 
 ## 2. File and Scale
 
