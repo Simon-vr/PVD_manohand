@@ -152,8 +152,3 @@ PVD_hand_new/
   year={2024}
 }
 ```
-
-## 说明
-
-- `output/`、`.torch_extensions/`、`datasets/*.pt`、`checkpoints/*.pth` 已被 `.gitignore` 忽略。
-- 本仓库聚焦人手点云补全的训练 / 推理 / 可视化。
